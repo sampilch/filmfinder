@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>Film Finder</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- YOUR HTML GOES HERE -->
+    <nav class="navbar">
+        <!-- title -->
+        <a href="/index.html"><h1>Film Finder</h1></a>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <nav class="menu">
+    
+            <li><a href="/database.html">Database</a></li>
+            <li><a href="/about.html">About</a></li>
+          </nav>
+        </ul>
+      </nav>
+      
+      <div class="info">
+      <img class="poster" src="/images/bill.jpeg" alt="Movie poster of a woman in a black and yellow jumpsuit holding a sword.">
+      <h2>You got...</h2>
+      <h1>Kill Bill: Vol. 1</h1>
+    
+    <div class="categories">
+      <span><strong>Year:</strong> 2003</span>
+      <span><strong>Runtime:</strong> 110 min</span>
+      <span><strong>Rating:</strong> R</span>
+      <span><strong>Directed by:</strong> Quentin Tarantino</span>
+      <span><strong>Rotten Tomatoes Score:</strong> 85%</span>
+    </div>
+
+    <p>
+        A former assassin, known simply as The Bride, wakes from a coma four years after her jealous ex-lover Bill attempts to murder her on her wedding day. Fueled by an insatiable desire for revenge, she vows to get even with every person who contributed to the loss of her unborn child, her entire wedding party, and four years of her life. 
+        After devising a hit list, The Bride sets off on her quest, enduring unspeakable injury and unscrupulous enemies.
+    </p>
+    
+    <p><strong>You may also like:</strong> Crouching Tiger Hidden Dragon, The Princess Bride</p>
+    
+    <a href="/index.html"><button>Play Again</button></a>
+    <a href="/database.html"><button>All Movies</button></a>
+
+
+    </div>
+    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+  </body>
+</html>

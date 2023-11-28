@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>Film Finder</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- YOUR HTML GOES HERE -->
+    <nav class="navbar">
+        <!-- title -->
+        <a href="/index.html"><h1>Film Finder</h1></a>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <nav class="menu">
+    
+            <li><a href="/database.html">Database</a></li>
+            <li><a href="/about.html">About</a></li>
+          </nav>
+        </ul>
+      </nav>
+      
+      <div class="info">
+      <img class="poster" src="/images/airplane.jpeg" alt="'Airplane' movie poster with an illustrated plane twisted in a knot and the tagline 'What's slower than a speeding bullet, and able to hit tall buildings at a single bound?'">
+      <h2>You got...</h2>
+      <h1>Airplane!</h1>
+    
+    <div class="categories">
+      <span><strong>Year:</strong> 1980</span>
+      <span><strong>Runtime:</strong> 88 min</span>
+      <span><strong>Rating:</strong> PG</span>
+      <span><strong>Directed by:</strong> David and Jerry Zucker</span>
+      <span><strong>Rotten Tomatoes Score:</strong> 97%</span>
+    </div>
+
+    <p>This spoof comedy takes shots at the slew of disaster movies that were released in the 70s. 
+        When the passengers and crew of a jet are incapacitated due to food poisoning, a rogue pilot with a drinking problem 
+        must cooperate with his ex-girlfriend turned stewardess to bring the plane to a safe landing.</p>
+    
+    <p><strong>You may also like:</strong> The Parent Trap, The Bob's Burgers Movie</p>
+    
+      <a href="/index.html"><button>Play Again</button></a>
+      <a href="/database.html"><button>All Movies</button></a>
+
+    </div>
+    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+  </body>
+</html>

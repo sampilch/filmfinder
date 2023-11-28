@@ -1,9 +1,291 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background: magenta;
+  font-family: 'poppins', sans-serif;
 }
-p {
-    font-size: 2em;
+
+nav h1 {
+  color: white;
 }
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: darkred;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+h1 {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: black;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.test {
+  display: none;
+}
+
+  
+#carousel-container {
+  width: 60%;
+  overflow: hidden;
+  background-color: #eee;
+  padding:10px;
+  height: 20em;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8em;
+}
+  
+      #carousel {
+        display: flex;
+        
+      }
+  
+      .carousel-item {
+        width: 100%;
+        flex: 0 0 auto;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+        padding:10px;
+      }
+  
+  
+  button {
+    width: 32%;
+    padding: 5px;
+    font-family: 'poppins', sans-serif;
+  }
+
+  button a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  #carousel h1 {
+    text-align: center;
+    padding:20px;
+  }
+
+  .info {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4em;
+    padding: 20px;
+  }
+
+  .poster {
+    width: 300px;
+    height: auto;
+    float: left;
+    padding: 10px;
+  }
+
+ .categories {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:left;
+  gap: 5px;
+ }
+
+ .categories span {
+  border: 1px solid red;
+  padding: 5px;
+  font-size: 12px;
+ }
+
+ .info h1 {
+  margin-bottom: 10px;
+ }
+
+ .info p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+ }
+
+.info > p:last-of-type {
+  font-size: 12px;
+  margin-bottom: 15px;
+ }
+
+ .info button {
+  float: left;
+  width: 25%;
+  margin-right: 5px;
+ }
+
+ .datacont {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  padding: 10px;
+ }
+
+#itemsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+ .item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  height: 300px;
+}
+
+.item a {
+  font-size: 15px;
+  color: darkred;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.item img {
+  width: 150px;
+  height: auto;
+}
+
+
+  @media screen and (max-width: 580px) {
+    .carousel-item {
+      column-gap:10px;
+    }
+    
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      display:none;
+      position: absolute;
+      background-color:darkred;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .menu li:hover {
+      display: inline-block;
+      background-color:#4c9e9e;
+      transition: 0.3s ease;
+    }
+  
+    input[type=checkbox]:checked ~ .menu {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .dropdown {
+      left: 50%;
+      top: 30px;
+      transform: translateX(35%);
+    }
+  
+    .dropdown li:hover {
+      background-color: #4c9e9e;
+    }
+
+    .info {
+      margin-top: 2em;
+    }
+
+    .poster {
+      float: none;
+      margin: auto;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .info h1, h2 {
+      text-align: center;
+    } 
+
+    #itemsContainer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (min-width: 581px) and (max-width: 750px) {
+    #itemsContainer {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+    

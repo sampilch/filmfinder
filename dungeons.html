@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PUT A TITLE IN HERE -->
+    <title>Film Finder</title>
+    <!-- PUT A DESCRIPTION IN HERE -->
+    <meta name="description" content="describe content of the page here...." />
+    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
+    <link rel="stylesheet" href="styles.normalize.css" />
+    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
+    <!-- LINK TO YOUR STYLES -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="scripts/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- YOUR HTML GOES HERE -->
+    <nav class="navbar">
+        <!-- title -->
+        <a href="/index.html"><h1>Film Finder</h1></a>
+    
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+    
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    
+          <!-- NAVIGATION MENUS -->
+          <nav class="menu">
+    
+            <li><a href="/database.html">Database</a></li>
+            <li><a href="/about.html">About</a></li>
+          </nav>
+        </ul>
+      </nav>
+      
+      <div class="info">
+      <img class="poster" src="/images/dungeons.jpeg" alt="Movie poster of five fantasy warriors holding various weapons.">
+      <h2>You got...</h2>
+      <h1>Dungeons & Dragons: Honor Among Thieves</h1>
+    
+    <div class="categories">
+      <span><strong>Year:</strong> 2023</span>
+      <span><strong>Runtime:</strong> 134 min</span>
+      <span><strong>Rating:</strong> PG-13</span>
+      <span><strong>Directed by:</strong> Jonathan M. Goldstein, John Francis Daley</span>
+      <span><strong>Rotten Tomatoes Score:</strong> 91%</span>
+    </div>
+
+    <p>
+        A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people. 
+        Dungeons & Dragons: Honor Among Thieves brings the rich world and playful spirit of the legendary roleplaying game to the big screen in a hilarious and action-packed adventure.
+    </p>
+    
+    <p><strong>You may also like:</strong> The Lord of the Rings: The Fellowship of the Ring, Labyrinth</p>
+    
+    <a href="/index.html"><button>Play Again</button></a>
+    <a href="/database.html"><button>All Movies</button></a>
+
+
+    </div>
+    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+  </body>
+</html>
