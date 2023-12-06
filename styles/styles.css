@@ -251,6 +251,10 @@ input[type=checkbox] {
 
 
   @media screen and (max-width: 580px) {
+    #carousel-container {
+      height:400px;
+    }
+
     .carousel-item {
       column-gap:10px;
     }
@@ -300,11 +304,15 @@ input[type=checkbox] {
 
     .info {
       margin-top: 2em;
+      height: 850px;
+      margin-left: 1em;
+      margin-right: 1em;
     }
 
     .poster {
       float: none;
-      margin: auto;
+      margin-left: 4em;
+      margin-right: 4em;
       align-items: center;
       justify-content: center;
 
