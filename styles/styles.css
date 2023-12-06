@@ -21,11 +21,13 @@ html {
 }
 
 body {
+  color: #232323;
+  background-color: #232323;
   font-family: 'poppins', sans-serif;
 }
 
 nav h1 {
-  color: white;
+  color: #fcfcfc;
 }
 
 nav a {
@@ -42,17 +44,19 @@ nav li {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: darkred;
-  color: #fff;
+  background-color: #701f21;
+  color: #fcfcfc;
+  height:100px;
 }
 
 .nav-links a {
-  color: #fff;
+  color: #fcfcfc;
 }
 
 /* LOGO */
 h1 {
   font-size: 32px;
+  color: #fcfcfc;
 }
 
 /* NAVBAR MENU */
@@ -63,13 +67,12 @@ h1 {
 }
 
 .menu li:hover {
-  background-color: black;
-  border-radius: 5px;
+  background-color: #232323;
   transition: 0.3s ease;
 }
 
 .menu li {
-  padding: 5px 14px;
+  padding:30px;
 }
 
 
@@ -94,10 +97,10 @@ input[type=checkbox] {
 #carousel-container {
   width: 60%;
   overflow: hidden;
-  background-color: #eee;
+  background-color: #701f21;
   padding:10px;
   height: 20em;
-  border: 1px solid black;
+  border: 1px solid #c9393d;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8em;
@@ -118,7 +121,22 @@ input[type=checkbox] {
         padding:10px;
       }
   
-  
+  input[type="radio"] {
+        position: absolute;
+        left: -2000px;
+  }
+
+  #carousel label {
+    background-color: #fcfcfc;
+    width: 32%;
+    padding: 5px;
+    font-family: 'poppins', sans-serif;
+  }
+
+  #carousel label:hover {
+    background-color: #facc77;
+  }
+
   button {
     width: 32%;
     padding: 5px;
@@ -233,16 +251,20 @@ input[type=checkbox] {
     .menu {
       display:none;
       position: absolute;
-      background-color:darkred;
+      background-color:#701f21;
       right: 0;
       left: 0;
       text-align: center;
-      padding: 16px 0;
+      padding: 16px 0 0 0;
     }
   
+    .menu li {
+      width: 100%;
+    }
+
     .menu li:hover {
       display: inline-block;
-      background-color:#4c9e9e;
+      background-color:#232323;
       transition: 0.3s ease;
     }
   

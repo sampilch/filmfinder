@@ -47,17 +47,17 @@
             <!--0--->
             <div class="carousel-item">
               <h1>What are you in the mood for?</h1>
-              <button onclick="goToSlide(1)">Lighthearted</button>
-              <button onclick="goToSlide(5)">Exciting</button>
-              <button onclick="goToSlide(9)">Dramatic</button>
+              <input type="radio" id="light" name="carouselSlide" value="light"><label for="light">Lighthearted</label>
+              <input type="radio" id="exciting" name="carouselSlide" value="exciting"><label for="exciting">Exciting</label>
+              <input type="radio" id="drama" name="carouselSlide" value="drama"><label for="drama">Dramatic</label>
             </div>
             
             <!--1--->
             <div class="carousel-item">
               <h1>Be more specific.</h1>
-              <button onclick="goToSlide(2)">Comedy</button>
-              <button onclick="goToSlide(3)">Rom-com</button>
-              <button onclick="goToSlide(4)">Animated</button>
+              <input type="radio" id="comedy" name="carouselSlide" value="comedy"><label for="comedy">Comedy</label>
+              <input type="radio" id="romcom" name="carouselSlide" value="romcom"><label for="romcom">Rom-Com</label>
+              <input type="radio" id="animated" name="carouselSlide" value="animated"><label for="animated">Animated</label>
             </div>
             
             <!--2--->
@@ -87,15 +87,15 @@
              <!--5--->
             <div class="carousel-item">
               <h1>Be more specific.</h1>
-              <button onclick="goToSlide(6)">Action</button>
-              <button onclick="goToSlide(7)">Thriller</button>
-              <button onclick="goToSlide(8)">Adventure</button>
+              <input type="radio" id="action" name="carouselSlide" value="action"><label for="action">Action</label>
+              <input type="radio" id="thrill" name="carouselSlide" value="thrill"><label for="thrill">Thriller</label>
+              <input type="radio" id="advent" name="carouselSlide" value="advent"><label for="advent">Adventure</label>
             </div>
   
             <!--6--->
             <div class="carousel-item">
               <h1>What kind of action?</h1>
-              <a href="drive.html"><button>Car chases!</button></a>
+              <a href="result.html"><button>Car chases!</button></a>
               <a href="batman.html"><button>Superheros!</button></a>  
               <a href="bill.html"><button>Sword fights!</button></a>
             </div>
@@ -119,9 +119,9 @@
             <!--9--->
             <div class="carousel-item">
               <h1>Be more specific.</h1>
-              <button onclick="goToSlide(10)">Romance</button>
-              <button onclick="goToSlide(11)">Horror</button>
-              <button onclick="goToSlide(12)">Historical</button>
+              <input type="radio" id="romance" name="carouselSlide" value="romance"><label for="romance">Romance</label>
+              <input type="radio" id="horror" name="carouselSlide" value="horror"><label for="horror">Horror</label>
+              <input type="radio" id="historic" name="carouselSlide" value="historic"><label for="historic">Historical</label>
             </div>
   
             <!--10--->
@@ -151,8 +151,6 @@
             <!-- Add more items as needed -->
           </div>
         </div>
-        
-        <button class="test" onclick="goToSlide(0)">Start over</button>
   
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>
