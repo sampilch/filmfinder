@@ -430,8 +430,8 @@ footer a {
 
     .poster {
       float: none;
-      margin-left: 4em;
-      margin-right: 4em;
+      margin-left: 2em;
+      margin-right: 2em;
       align-items: center;
       justify-content: center;
 
@@ -440,13 +440,18 @@ footer a {
       text-align: center;
     } 
 
+    .info a {
+      width: 42%;
+    }
+
+/* database */    
     .filter-items {
       grid-template-columns: 1fr 1fr;
     }
 
-    .info a {
-      width: 45%;
-    }
+    .filter-btns {
+      font-size: 12px;
+     }
 
     /* about */
     .about {
