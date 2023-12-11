@@ -8,6 +8,7 @@
     <title>Film Finder</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="Find a movie to watch!" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
@@ -20,17 +21,17 @@
   <body>
     <!-- YOUR HTML GOES HERE -->
     <nav class="navbar">
-        <!-- title -->
+
+      <div class="logo">
+        <img src="images/logo.png">
         <a href="index.html"><h1>Film Finder</h1></a>
+      </div>
     
-        <!-- NAVIGATION MENU -->
         <ul class="nav-links">
     
-          <!-- USING CHECKBOX HACK -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
     
-          <!-- NAVIGATION MENUS -->
           <nav class="menu">
     
             <li><a href="database.html">Database</a></li>
@@ -44,23 +45,31 @@
       <h2>You got...</h2>
       <h1>Palm Springs</h1>
     
-    <div class="categories">
-      <span><strong>Year:</strong> 2020</span>
-      <span><strong>Runtime:</strong> 90 min</span>
-      <span><strong>Rating:</strong> R</span>
-      <span><strong>Directed by:</strong> Max Barbakow</span>
-      <span><strong>Rotten Tomatoes Score:</strong> 94%</span>
-    </div>
+    <ul class="categories">
+      <li><strong>Year:</strong> 2020</li>
+      <li><strong>Runtime:</strong> 90 min</li>
+      <li><strong>Rating:</strong> R</li>
+      <li><strong>Directed by:</strong> Max Barbakow</li>
+      <li><strong>Rotten Tomatoes Score:</strong> 94%</li>
+    </ul>
 
     <p>Stuck in a time loop, two wedding guests develop a budding romance while living the same day over and over again.</p>
     
-    <p><strong>You may also like:</strong> No Hard Feelings, Bros</p>
+    <p class="more"><strong>You may also like:</strong> No Hard Feelings, Bros</p>
     
-    <a href="index.html"><button>Play Again</button></a>
-    <a href="database.html"><button>All Movies</button></a>
+    <a href="index.html">Play Again</a>
+    <a href="database.html">All Movies</a>
 
 
     </div>
+
+    <footer>
+      <a href="https://docs.google.com/document/d/1VXZBMkR57Ta4YS_jQCol-NFhYwIlyS2sqUe4vt7qG2c/edit?usp=sharing" target="_blank">Project Proposal</a> | 
+      <a href="https://docs.google.com/presentation/d/1gX88mMZCCXQPfuAnMLF6oYoPTaVGo88IghFGqd07yIE/edit?usp=sharing" target="_blank">Wireframes</a> | 
+      <a href="https://docs.google.com/document/d/1PgZn4g9oC_h2kGBuilSjCS1Uxpe9EvWp3SJjitfgxmA/edit?usp=sharing" target="_blank">Design Documentation</a> | 
+      <a href="https://docs.google.com/document/d/1YKPKw5KK2AlRlsFsd39fYi4_PvVKT5tXG188dJDQPpk/edit?usp=sharing" target="_blank">UX/UI Report</a>
+    </footer>
+
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>
 </html>

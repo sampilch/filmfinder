@@ -8,6 +8,7 @@
     <title>Film Finder</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="Find a movie to watch!" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
@@ -20,17 +21,17 @@
   <body>
     <!-- YOUR HTML GOES HERE -->
     <nav class="navbar">
-        <!-- title -->
+
+        <div class="logo">
+          <img src="images/logo.png">
         <a href="index.html"><h1>Film Finder</h1></a>
+      </div>
     
-        <!-- NAVIGATION MENU -->
         <ul class="nav-links">
     
-          <!-- USING CHECKBOX HACK -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
     
-          <!-- NAVIGATION MENUS -->
           <nav class="menu">
     
             <li><a href="database.html">Database</a></li>
@@ -42,160 +43,177 @@
       <div class="datacont">
       <h1>Movie Database</h1>
 
-      <div>
-        <label for="sort">Sort by:</label>
-        <select id="sort" onchange="sortItems()">
-          <option value="default">Default</option>
-          <option value="name">Name (A-Z)</option>
-          <option value="year">Year (old → new)</option>
-          <option value="time">Runtime (short → long)</option>
-          <option value="rating">Rating (G → R)</option>
-          <!-- Add more options based on your sorting criteria -->
-        </select>
-      </div>
+      <ul class="filter-btns">
+        <li class="filter-btn" id="all"><a href="#">All Movies</a></li>
+        <li id="rating"><strong>Rating</strong></li>
+        <li class="filter-btn" id="g"><a href="#">G</a></li>
+        <li class="filter-btn" id="pg"><a href="#">PG</a></li>
+        <li class="filter-btn" id="pg13"><a href="#">PG-13</a></li>
+        <li class="filter-btn" id="r"><a href="#">R</a></li>
+        <li id="year"><strong>Year</strong></li>
+        <li class="filter-btn" id="80s"><a href="#">1980s</a></li>
+        <li class="filter-btn" id="90s"><a href="#">1990s</a></li>
+        <li class="filter-btn" id="00s"><a href="#">2000s</a></li>
+        <li class="filter-btn" id="10s"><a href="#">2010s</a></li>
+        <li class="filter-btn" id="20s"><a href="#">2020s</a></li>
+        <li id="genre"><strong>Genre</strong></li>
+        <li class="filter-btn" id="com"><a href="#">Comedy</a></li>
+        <li class="filter-btn" id="rom"><a href="#">Romance</a></li>
+        <li class="filter-btn" id="act"><a href="#">Action</a></li>
+        <li class="filter-btn" id="dram"><a href="#">Drama</a></li>
+        <li class="filter-btn" id="hor"><a href="#">Horror</a></li>
+        <li class="filter-btn" id="scifi"><a href="#">Sci-Fi</a></li>
+        <li class="filter-btn" id="fan"><a href="#">Fantasy</a></li>
+      </ul>
       
-      <div id="itemsContainer">
-        <!-- Your items go here, each with a class 'item' -->
-        <div class="item" data-name="Airplane" data-year="1980" data-time="0.88" data-rating="PG">
-          <img src="images/airplane.jpeg">
-          <p><a href="airplane.html">Airplane!</a></p>
-        </div>
+      <div class="filter-items">
 
-        <div class="item" data-name="Barbie" data-year="2023" data-time="1.14" data-rating="PG-13">
-          <img src="images/barbie.jpeg">
-          <p><a href="barbie.html">Barbie</a></p>
-        </div>
-
-        <div class="item" data-name="Bottoms" data-year="2023" data-time="0.92" data-rating="R">
-          <img src="images/bottoms.jpg">
-          <p><a href="bottoms.html">Bottoms</a></p>
-        </div>
-
-        <div class="item" data-name="Sixteen" data-year="1984" data-time="0.90" data-rating="PG">
-          <img src="images/sixteen.jpg">
-          <p><a href="sixteen.html">Sixteen Candles</a></p>
-        </div>
-
-        <div class="item" data-name="Legally" data-year="2001" data-time="0.96" data-rating="PG-13">
-          <img src="images/blonde.jpeg">
-          <p><a href="blonde.html">Legally Blonde</a></p>
-        </div>
-
-        <div class="item" data-name="Palm" data-year="2020" data-time="0.90" data-rating="R">
-          <img src="images/palm.jpeg">
-          <p><a href="palm.html">Palm Springs</a></p>
-        </div>
-
-        <div class="item" data-name="Spider" data-year="2018" data-time="1.17" data-rating="PG">
-          <img src="images/spider.jpeg">
-          <p><a href="spider.html">Spider-Man: Into the Spider-Verse</a></p>
-        </div>
-
-        <div class="item" data-name="My" data-year="1988" data-time="0.87" data-rating="G">
-          <img src="images/totoro.jpeg">
-          <p><a href="totoro.html">My Neighbor Totoro</a></p>
-        </div>
-
-        <div class="item" data-name="Puss" data-year="2022" data-time="1.02" data-rating="PG">
-          <img src="images/puss.jpeg">
-          <p><a href="puss.html">Puss in Boots: The Last Wish</a></p>
-        </div>
-
-        <div class="item" data-name="Drive" data-year="2011" data-time="1.00" data-rating="R">
-          <img src="images/drive.jpeg">
-          <p><a href="drive.html">Drive</a></p>
-        </div>
-
-        <div class="item" data-name="Batman" data-year="1989" data-time="1.26" data-rating="PG-13">
-          <img src="images/batman.jpg">
-          <p><a href="batman.html">Batman</a></p>
-        </div>
-
-        <div class="item" data-name="Kill" data-year="2003" data-time="1.10" data-rating="R">
-          <img src="images/bill.jpeg">
-          <p><a href="bill.html">Kill Bill: Vol. 1</a></p>
-        </div>
-
-        <div class="item" data-name="Big" data-year="1998" data-time="1.17" data-rating="R">
-          <img src="images/lebowski.jpeg">
-          <p><a href="lebowski.html">The Big Lebowski</a></p>
-        </div>
-
-        <div class="item" data-name="Ocean" data-year="2001" data-time="1.16" data-rating="PG-13">
-          <img src="images/oceans.jpeg">
-          <p><a href="oceans.html">Ocean's Eleven</a></p>
-        </div>
-
-        <div class="item" data-name="Knives" data-year="2019" data-time="1.30" data-rating="PG-13">
-          <img src="images/knives.jpeg">
-          <p><a href="knives.html">Knives Out</a></p>
-        </div>
-
-        <div class="item" data-name="Dungeons" data-year="2023" data-time="1.34" data-rating="PG-13">
-          <img src="images/dungeons.jpeg">
-          <p><a href="dungeons.html">Dungeons & Dragons</a></p>
-        </div>
-
-        <div class="item" data-name="Martian" data-year="2015" data-time="1.42" data-rating="PG-13">
-          <img src="images/martian.jpeg">
-          <p><a href="martian.html">The Martian</a></p>
-        </div>
-
-        <div class="item" data-name="Mad" data-year="2015" data-time="1.20" data-rating="R">
-          <img src="images/max.jpg">
-          <p><a href="max.html">Mad Max: Fury Road</a></p>
-        </div>
-
-        <div class="item" data-name="Moonrise" data-year="2012" data-time="0.94" data-rating="PG-13">
-          <img src="images/moonrise.jpeg">
-          <p><a href="moonrise.html">Moonrise Kingdom</a></p>
-        </div>
-
-        <div class="item" data-name="A Star" data-year="2018" data-time="1.35" data-rating="R">
-          <img src="images/star.jpg">
+	<div class="filter-item all r 10s rom dram">
+          <img src="images/star.jpg" alt="Black and white movie poster of a man playing guitar and a woman leaning in to kiss him.">
           <p><a href="star.html">A Star is Born</a></p>
         </div>
 
-        <div class="item" data-name="Eternal" data-year="2004" data-time="1.08" data-rating="R">
-          <img src="images/eternal.jpg">
-          <p><a href="eternal.html">Eternal Sunshine of the Spotless Mind</a></p>
+        <div class="filter-item all pg 80s com">
+          <img src="images/airplane.jpeg" alt="An illustrated plane twisted in a knot and the tagline 'What's slower than a speeding bullet, and able to hit tall buildings at a single bound?'">
+          <p><a href="airplane.html">Airplane!</a></p>
         </div>
 
-        <div class="item" data-name="X" data-year="2022" data-time="1.05" data-rating="R">
-          <img src="images/x.jpeg">
-          <p><a href="x.html">X</a></p>
+        <div class="filter-item all pg13 20s com fan">
+          <img src="images/barbie.jpeg" alt="Movie poster of Barbie and Ken in a pink car with the tagline, 'She's everything. He's just Ken.'">
+          <p><a href="barbie.html">Barbie</a></p>
         </div>
 
-        <div class="item" data-name="Cabin" data-year="2011" data-time="0.95" data-rating="R">
-          <img src="images/cabin.jpeg">
+        <div class="filter-item all pg13 80s act">
+          <img src="images/batman.jpg" alt="Movie poster of Batman's logo on a black background.">
+          <p><a href="batman.html">Batman</a></p>
+        </div>
+
+        <div class="filter-item all r 90s com dram">
+          <img src="images/lebowski.jpeg" alt="Movie poster of four men and a woman behind a giant bowling ball and bowling pins.">
+          <p><a href="lebowski.html">The Big Lebowski</a></p>
+        </div>
+
+        <div class="filter-item all r 20s com rom">
+          <img src="images/bottoms.jpg" alt="Movie poster of five high school girls, two football players, and a teacher. The tagline says, 'a movie about empowering women (the hot ones).'">
+          <p><a href="bottoms.html">Bottoms</a></p>
+        </div>
+
+        <div class="filter-item all r 10s hor com">
+          <img src="images/cabin.jpeg" alt="Movie poster of a surreal wooden cabin twisting and turning.">
           <p><a href="cabin.html">The Cabin in the Woods</a></p>
         </div>
 
-        <div class="item" data-name="Hereditary" data-year="2018" data-time="1.27" data-rating="R">
-          <img src="images/hereditary.jpeg">
-          <p><a href="hereditary.html">Hereditary</a></p>
-        </div>
-        
-        <div class="item" data-name="Little" data-year="2019" data-time="1.35" data-rating="PG">
-          <img src="images/little.jpeg">
-          <p><a href="little.html">Little Women</a></p>
+        <div class="filter-item all r 10s act dram">
+          <img src="images/drive.jpeg" alt="Movie poster of a man sitting behind a steering wheel.">
+          <p><a href="drive.html">Drive</a></p>
         </div>
 
-        <div class="item" data-name="Great" data-year="2013" data-time="1.42" data-rating="PG-13">
-          <img src="images/gatsby.jpeg">
+        <div class="filter-item all pg13 20s act fan">
+          <img src="images/dungeons.jpeg" alt="Movie poster of five fantasy warriors holding various weapons.">
+          <p><a href="dungeons.html">Dungeons & Dragons</a></p>
+        </div>
+
+        <div class="filter-item all r 00s rom dram">
+          <img src="images/eternal.jpg" alt="Movie poster of a man looking at himself and a woman lying down together on cracked ice.">
+          <p><a href="eternal.html">Eternal Sunshine of the Spotless Mind</a></p>
+        </div>
+
+        <div class="filter-item all pg13 10s dram">
+          <img src="images/gatsby.jpeg" alt="Movie poster of expensively-dressed people on a golden art deco background.">
           <p><a href="gatsby.html">The Great Gatsby</a></p>
         </div>
 
-        <div class="item" data-name="oppenheimer" data-year="2023" data-time="1.50" data-rating="R">
-          <img src="images/oppenheimer.jpeg">
+        <div class="filter-item all r 10s hor dram">
+          <img src="images/hereditary.jpeg" alt="Movie poster of a grim-looking family standing in shadow.">
+          <p><a href="hereditary.html">Hereditary</a></p>
+        </div>
+
+        <div class="filter-item all r 00s act dram">
+          <img src="images/bill.jpeg" alt="Movie poster of a woman in a black and yellow jumpsuit holding a sword.">
+          <p><a href="bill.html">Kill Bill: Vol. 1</a></p>
+        </div>
+
+        <div class="filter-item all pg13 10s dram">
+          <img src="images/knives.jpeg" alt="Movie poster of a large wealthy family in an old mansion living room. An old man sits in a red armchair in front of everyone.">
+          <p><a href="knives.html">Knives Out</a></p>
+        </div>
+
+        <div class="filter-item all pg13 00s com rom">
+          <img src="images/blonde.jpeg" alt="Movie poster of a smiling woman in a pink dress walking a dog in front of college students.">
+          <p><a href="blonde.html">Legally Blonde</a></p>
+        </div>
+
+        <div class="filter-item all pg 10s dram">
+          <img src="images/little.jpeg" alt="Movie poster of four sisters looking out of a window.">
+          <p><a href="little.html">Little Women</a></p>
+        </div>
+
+        <div class="filter-item all r 10s act scifi">
+          <img src="images/max.jpg" alt="Movie poster of a man and a broken-down car in a desolate desert landscape.">
+          <p><a href="max.html">Mad Max: Fury Road</a></p>
+        </div>
+
+        <div class="filter-item all pg13 10s scifi dram">
+          <img src="images/martian.jpeg" alt="Movie poster of an astronaut with mountains reflected in his helmet.">
+          <p><a href="martian.html">The Martian</a></p>
+        </div>
+
+        <div class="filter-item all pg13 10s rom">
+          <img src="images/moonrise.jpeg" alt="Movie poster of a Khaki Scout troop and a family with children standing in front of a forest.">
+          <p><a href="moonrise.html">Moonrise Kingdom</a></p>
+        </div>
+
+        <div class="filter-item all g 80s fan">
+          <img src="images/totoro.jpeg" alt="Movie poster of a young girl holding an umbrella standing at a bus stop next to a giant rabbit-like creature.">
+          <p><a href="totoro.html">My Neighbor Totoro</a></p>
+        </div>
+
+        <div class="filter-item all pg13 00s act">
+          <img src="images/oceans.jpeg" alt="Movie poster of four men and one woman on a blurry Las Vegas background.">
+          <p><a href="oceans.html">Ocean's Eleven</a></p>
+        </div>
+
+        <div class="filter-item all r 20s dram">
+          <img src="images/oppenheimer.jpeg" alt="Movie poster of a man in a suit and hat in front of a giant bomb surrounded by flames.">
           <p><a href="oppenheimer.html">Oppenheimer</a></p>
         </div>
 
-        <!-- Add more items as needed -->
+        <div class="filter-item all r 20s com rom scifi">
+          <img src="images/palm.jpeg" alt="Retro-style movie poster of a man and woman floating in a motel pool.">
+          <p><a href="palm.html">Palm Springs</a></p>
+        </div>
+
+        <div class="filter-item all pg 20s fan">
+          <img src="images/puss.jpeg" alt="Movie poster of an anthropomorphic cat pointing a sword at the viewer. On his left is an ominous wolf, a girl, and three bears, and on his right is another cat and a small dog.">
+          <p><a href="puss.html">Puss in Boots: The Last Wish</a></p>
+        </div>
+
+        <div class="filter-item all pg 80s com rom">
+          <img src="images/sixteen.jpg" alt="Movie poster of three teenagers. The tagline says, 'It's the time of your life that may last a lifetime.'">
+          <p><a href="sixteen.html">Sixteen Candles</a></p>
+        </div>
+
+
+        <div class="filter-item all pg 10s act scifi">
+          <img src="images/spider.jpeg" alt="Movie poster of five variations of Spider-Man swinging across New York City.">
+          <p><a href="spider.html">Spider-Man: Into the Spider-Verse</a></p>
+        </div>
+
+        <div class="filter-item all r 20s hor">
+          <img src="images/x.jpeg" alt="Movie poster of a woman holding an axe behind wooden beams in the shape of an X.">
+          <p><a href="x.html">X</a></p>
+        </div>
+
+
       </div>
       
     </div>
-
+    <footer>
+      <a href="https://docs.google.com/document/d/1VXZBMkR57Ta4YS_jQCol-NFhYwIlyS2sqUe4vt7qG2c/edit?usp=sharing" target="_blank">Project Proposal</a> | 
+      <a href="https://docs.google.com/presentation/d/1gX88mMZCCXQPfuAnMLF6oYoPTaVGo88IghFGqd07yIE/edit?usp=sharing" target="_blank">Wireframes</a> | 
+      <a href="https://docs.google.com/document/d/1PgZn4g9oC_h2kGBuilSjCS1Uxpe9EvWp3SJjitfgxmA/edit?usp=sharing" target="_blank">Design Documentation</a> | 
+      <a href="https://docs.google.com/document/d/1YKPKw5KK2AlRlsFsd39fYi4_PvVKT5tXG188dJDQPpk/edit?usp=sharing" target="_blank">UX/UI Report</a>
+    </footer>
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>
 </html>

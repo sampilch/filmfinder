@@ -8,6 +8,7 @@
     <title>Film Finder</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="Find a movie to watch!" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
@@ -20,13 +21,12 @@
   <body>
     <!-- YOUR HTML GOES HERE -->
     <nav class="navbar">
-        <!-- title -->
-        <a href="index.html"><h1>Film Finder</h1></a>
+        <div class="logo">
+          <img src="images/logo.png">
+          <a href="index.html"><h1>Film Finder</h1></a>
+        </div>
     
-        <!-- NAVIGATION MENU -->
         <ul class="nav-links">
-    
-          <!-- USING CHECKBOX HACK -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
     
@@ -39,14 +39,37 @@
         </ul>
       </nav>
       
-    <div class="info">
+    <div class="about">
       <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue vestibulum sapien et fermentum. Maecenas molestie, felis a aliquam convallis, velit ligula ullamcorper mauris, vel elementum elit libero ac nisi. Nam vehicula nisl at odio porta molestie. Suspendisse potenti. Aliquam arcu massa, pulvinar a erat quis, euismod faucibus diam. Vestibulum a tellus elit. Donec nec est et sapien hendrerit egestas aliquet at magna. Vivamus sit amet nulla cursus lectus maximus aliquet. Vivamus molestie sed urna quis consequat. Ut imperdiet id sapien non maximus. Nulla facilisis ullamcorper eleifend. Phasellus et risus et eros molestie iaculis. Suspendisse consectetur ligula a mauris dapibus, vel varius ipsum porttitor.</p>
-      <p>All movie descriptions are from Rotten Tomatoes.</p>
       <p>
-        <a href="">Project Proposal</a> | <a href="">Project Wireframes</a> | <a href="">UX/UI Report</a>
+        Movies are more accessible than ever thanks to streaming services, but there are <i>so many</i> options!
+        Scrolling through a category trying to find something to watch is time-consuming and you're not guaranteed to find a movie you're interested in. 
       </p>
+      <p>
+        That's where Film Finder comes in! This short quiz gets straight to the point and recommends you a movie to watch (and two similar options if you're not satisfied).
+      </p>
+      <p>
+        All 27 movies on this website were handpicked and chosen with love. Whether they are critically acclaimed or a cult classic, I personally recommend every film.
+      </p>
+      <p>
+        This quiz is by no means comprehensive, but I would love to add more questions and movies in the future!
+      </p>
+
+      <h3>Credits</h3>
+      <p>All movie descriptions are from <a href="https://www.rottentomatoes.com/" target="_blank">Rotten Tomatoes</a>. 
+        All movie posters are from <a href="https://www.themoviedb.org/" target="_blank">The Movie Database</a>. 
+        Logo is from Adobe Stock. 
+      </p>
+      <p>© Samantha Pilchik 2023.</p>
     </div>
+
+    <footer>
+      <a href="https://docs.google.com/document/d/1VXZBMkR57Ta4YS_jQCol-NFhYwIlyS2sqUe4vt7qG2c/edit?usp=sharing" target="_blank">Project Proposal</a> | 
+      <a href="https://docs.google.com/presentation/d/1gX88mMZCCXQPfuAnMLF6oYoPTaVGo88IghFGqd07yIE/edit?usp=sharing" target="_blank">Wireframes</a> | 
+      <a href="https://docs.google.com/document/d/1PgZn4g9oC_h2kGBuilSjCS1Uxpe9EvWp3SJjitfgxmA/edit?usp=sharing" target="_blank">Design Documentation</a> | 
+      <a href="https://docs.google.com/document/d/1YKPKw5KK2AlRlsFsd39fYi4_PvVKT5tXG188dJDQPpk/edit?usp=sharing" target="_blank">UX/UI Report</a>
+    </footer>
+
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>
 </html>

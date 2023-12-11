@@ -7,12 +7,16 @@
     <!-- PUT A TITLE IN HERE -->
     <title>Film Finder</title>
     <!-- PUT A DESCRIPTION IN HERE -->
-    <meta name="description" content="describe content of the page here...." />
+    <meta name="description" content="Find a movie to watch!" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
     <!-- LINK TO YOUR STYLES -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
@@ -21,137 +25,141 @@
     <!-- YOUR HTML GOES HERE -->
     <nav class="navbar">
       <!-- title -->
-      <a href="/filmfinder/index.html"><h1>Film Finder</h1></a>
-  
+      <div class="logo">
+        <img src="images/logo.png">
+        <a href="index.html"><h1>Film Finder</h1></a>
+      </div>
+
+
       <!-- NAVIGATION MENU -->
       <ul class="nav-links">
-  
-        <!-- USING CHECKBOX HACK -->
         <input type="checkbox" id="checkbox_toggle" />
         <label for="checkbox_toggle" class="hamburger">&#9776;</label>
   
-        <!-- NAVIGATION MENUS -->
         <nav class="menu">
   
-          <li><a href="/filmfinder/database.html">Database</a></li>
-          <li><a href="/filmfinder/about.html">About</a></li>
+          <li><a href="database.html">Database</a></li>
+          <li><a href="about.html">About</a></li>
         </nav>
       </ul>
     </nav>
-  
-      <div id="carousel-container">
-          <div id="carousel">
-            
-            <!---change buttons to input-->
 
-            <!--0--->
-            <div class="carousel-item">
-              <h1>What are you in the mood for?</h1>
-              <input type="radio" id="light" name="carouselSlide" value="light"><label for="light">Lighthearted</label>
-              <input type="radio" id="exciting" name="carouselSlide" value="exciting"><label for="exciting">Exciting</label>
-              <input type="radio" id="drama" name="carouselSlide" value="drama"><label for="drama">Dramatic</label>
-            </div>
-            
-            <!--1--->
-            <div class="carousel-item">
-              <h1>Be more specific.</h1>
-              <input type="radio" id="comedy" name="carouselSlide" value="comedy"><label for="comedy">Comedy</label>
-              <input type="radio" id="romcom" name="carouselSlide" value="romcom"><label for="romcom">Rom-Com</label>
-              <input type="radio" id="animated" name="carouselSlide" value="animated"><label for="animated">Animated</label>
-            </div>
-            
-            <!--2--->
-            <div class="carousel-item">
-              <h1>How inappropriate?</h1>
-              <a href="airplane.html"><button>Keep it PG.</button></a>
-              <a href="barbie.html"><button>PG-13, please.</button></a>
-              <a href="bottoms.html"><button>R rated!</button></a>
-            </div>
-            
-            <!--3--->
-            <div class="carousel-item">
-              <h1>Pick a decade.</h1>
-              <a href="sixteen.html"><button>1980s</button></a>
-              <a href="blonde.html"><button>2000s</button></a> 
-              <a href="palm.html"><button>2020s</button></a>
-            </div>
-            
-            <!--4--->
-            <div class="carousel-item">
-              <h1>Who is the main character?</h1>
-              <a href="spider.html"><button>A hero</button></a>
-              <a href="totoro.html"><button>A child</button></a> 
-              <a href="puss.html"><button>An animal</button></a>
-            </div>
-            
-             <!--5--->
-            <div class="carousel-item">
-              <h1>Be more specific.</h1>
-              <input type="radio" id="action" name="carouselSlide" value="action"><label for="action">Action</label>
-              <input type="radio" id="thrill" name="carouselSlide" value="thrill"><label for="thrill">Thriller</label>
-              <input type="radio" id="advent" name="carouselSlide" value="advent"><label for="advent">Adventure</label>
-            </div>
-  
-            <!--6--->
-            <div class="carousel-item">
-              <h1>What kind of action?</h1>
-              <a href="result.html"><button>Car chases!</button></a>
-              <a href="batman.html"><button>Superheros!</button></a>  
-              <a href="bill.html"><button>Sword fights!</button></a>
-            </div>
-            
-            <!--7--->
-            <div class="carousel-item">
-              <h1>Pick a subject.</h1>
-              <a href="lebowski.html"><button>Crime</button></a>
-              <a href="oceans.html"><button>Heist</button></a> 
-              <a href="knives.html"><button>Mystery</button></a> 
-            </div>
-            
-            <!--8--->
-            <div class="carousel-item">
-              <h1>Where does it take place?</h1>
-              <a href="dungeons.html"><button>Fantasy world</button></a>
-              <a href="martian.html"><button>Outer space</button></a>
-              <a href="max.html"><button>Dystopian Earth</button></a>
-            </div>
-  
-            <!--9--->
-            <div class="carousel-item">
-              <h1>Be more specific.</h1>
-              <input type="radio" id="romance" name="carouselSlide" value="romance"><label for="romance">Romance</label>
-              <input type="radio" id="horror" name="carouselSlide" value="horror"><label for="horror">Horror</label>
-              <input type="radio" id="historic" name="carouselSlide" value="historic"><label for="historic">Historical</label>
-            </div>
-  
-            <!--10--->
-            <div class="carousel-item">
-              <h1>Does it have a happy ending?</h1>
-              <a href="moonrise.html"><button>Yes</button></a>
-              <a href="star.html"><button>No</button></a>
-              <a href="eternal.html"><button>Sort of</button></a>
-            </div>
-            
-            <!--11--->
-            <div class="carousel-item">
-              <h1>Who is the villain?</h1>
-              <a href="x.html"><button>A slasher</button></a>
-              <a href="cabin.html"><button>A monster</button></a>
-              <a href="hereditary.html"><button>A cult</button></a>
-            </div>
-            
-            <!--12--->
-            <div class="carousel-item">
-              <h1>Pick a time period.</h1>
-              <a href="little.html"><button>1800s</button></a>
-              <a href="gatsby.html"><button>Early 1900s</button></a>
-              <a href="oppenheimer.html"><button>World War II</button></a>
-            </div>
-  
-            <!-- Add more items as needed -->
-          </div>
-        </div>
-  
-    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+    <div class="slick-carousel">
+
+      <!--0--->
+      <div class="slide">
+        <h1>What are you in the mood for?</h1>
+        <a id="light">Lighthearted</a>
+        <a id="exc">Exciting</a>
+        <a id="dram">Dramatic</a>
+      </div>
+
+      <!--1--->
+      <div class="slide">
+        <h1>Be more specific.</h1>
+        <a id="com">Comedy</a>
+        <a id="rc">Rom-Com</a>
+        <a id="anim">Animated</a>
+      </div>
+
+      <!--2--->
+      <div class="slide">
+        <h1>How inappropriate?</h1>
+        <a href="airplane.html">Keep it PG.</a>
+        <a href="barbie.html">PG-13, please.</a>
+        <a href="bottoms.html">R rated!</a>
+      </div>
+
+      <!--3--->
+      <div class="slide">
+        <h1>Pick a decade.</h1>
+        <a href="sixteen.html">1980s</a>
+        <a href="blonde.html">2000s</a> 
+        <a href="palm.html">2020s</a>
+      </div>
+
+      <!--4--->
+      <div class="slide">
+        <h1>Who is the main character?</h1>
+        <a href="spider.html">A hero</a>
+        <a href="totoro.html">A child</a> 
+        <a href="puss.html">An animal</a>
+      </div>
+
+      <!--5--->
+      <div class="slide">
+        <h1>Be more specific.</h1>
+        <a id="act">Action</a>
+        <a id="thrill">Thriller</a>
+        <a id="adv">Adventure</a>
+      </div>
+
+      <!--6--->
+      <div class="slide">
+        <h1>What kind of action?</h1>
+        <a href="drive.html">Car chases!</a>
+        <a href="batman.html">Superheros!</a>  
+        <a href="bill.html">Sword fights!</a>
+      </div>
+
+      <!--7--->
+      <div class="slide">
+        <h1>Pick a subject.</h1>
+        <a href="lebowski.html">Crime</a>
+        <a href="oceans.html">Heist</a> 
+        <a href="knives.html">Mystery</a> 
+      </div>
+
+      <!--8--->
+      <div class="slide">
+        <h1>Where does it take place?</h1>
+        <a href="dungeons.html">Fantasy world</a>
+        <a href="martian.html">Outer space</a>
+        <a href="max.html">Dystopian Earth</a>
+      </div>
+
+      <!--9--->
+      <div class="slide">
+        <h1>Be more specific.</h1>
+        <a id="rom">Romance</a>
+        <a id="hor">Horror</a>
+        <a id="his">Historical</a>
+      </div>
+
+      <!--10--->
+      <div class="slide">
+        <h1>Does it have a happy ending?</h1>
+        <a href="moonrise.html">Yes</a>
+        <a href="star.html">No</a>
+        <a href="eternal.html">Sort of</a>
+      </div>
+                  
+      <!--11--->
+      <div class="slide">
+        <h1>Who is the villain?</h1>
+        <a href="x.html">A slasher</a>
+        <a href="cabin.html">A monster</a>
+        <a href="hereditary.html">A cult</a>
+      </div>
+                  
+      <!--12--->
+      <div class="slide">
+        <h1>Pick a time period.</h1>
+        <a href="little.html">1800s</a>
+        <a href="gatsby.html">Early 1900s</a>
+        <a href="oppenheimer.html">World War II</a>
+      </div>
+
+
+    </div>
+
+    <footer>
+      <a href="">Project Proposal</a> | <a href="">Wireframes</a> | <a href="">Design Documentation</a> | <a href="">UX/UI Report</a>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
   </body>
 </html>

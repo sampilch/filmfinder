@@ -1,46 +1,113 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
-var currentIndex = 0;
-  var totalItems = document.querySelectorAll('.carousel-item').length;
-  var carousel = document.getElementById('carousel');
 
-  function showSlide(index) {
-    if (index < 0) {
-      currentIndex = totalItems - 1;
-    } else if (index >= totalItems) {
-      currentIndex = 0;
-    } else {
-      currentIndex = index;
-    }
+/* database filters */
+const allFilterItems = document.querySelectorAll('.filter-item');
+const allFilterBtns = document.querySelectorAll('.filter-btn');
 
-    var translateValue = -currentIndex * 100 + '%';
-    carousel.style.transform = 'translateX(' + translateValue + ')';
-  }
 
-  function goToSlide(index) {
-    showSlide(index);
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  allFilterBtns[0].classList.add('active-btn');
+});
 
-  function sortItems() {
-    var select = document.getElementById('sort');
-    var selectedValue = select.value;
-    
-    var container = document.getElementById('itemsContainer');
-    var items = Array.from(container.getElementsByClassName('item'));
+allFilterBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+      showFilteredContent(btn);
+  });
+});
 
-    items.sort(function(a, b) {
-      var aValue = a.getAttribute('data-' + selectedValue);
-      var bValue = b.getAttribute('data-' + selectedValue);
-
-      if (selectedValue === 'default') {
-        return 0; // No sorting needed
+function showFilteredContent(btn){
+  allFilterItems.forEach((item) => {
+      if(item.classList.contains(btn.id)){
+          resetActiveBtn();
+          btn.classList.add('active-btn');
+          item.style.display = "block";
       } else {
-        return aValue.localeCompare(bValue);
+          item.style.display = "none";
       }
+  });
+}
+
+function resetActiveBtn(){
+  allFilterBtns.forEach((btn) => {
+      btn.classList.remove('active-btn');
+  });
+}
+
+/* slick carousel */
+  $(document).ready(function(){
+    $('.slick-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      draggable: false,
+      dots: false,
+      prevArrow: false,
+      nextArrow: false,
+      speed: 200,
+      fade: true,
+      cssEase: 'linear'
     });
 
-    // Clear the container and append the sorted items
-    container.innerHTML = '';
-    items.forEach(function(item) {
-      container.appendChild(item);
+    $('#light').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(1));
     });
-  }
+
+    $('#com').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(2));
+    });
+    
+    $('#rc').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(3));
+    });
+
+    $('#anim').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(4));
+    });
+
+    $('#exc').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(5));
+    });
+
+    $('#act').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(6));
+    });
+
+    $('#thrill').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(7));
+    });
+
+    $('#adv').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(8));
+    });
+
+    $('#dram').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(9));
+    });
+
+    $('#rom').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(10));
+    });
+
+    $('#hor').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(11));
+    });
+
+    $('#his').click(function() {
+      var slider = $('.slick-carousel');
+      slider[0].slick.slickGoTo(parseInt(12));
+    });
+
+  });
+
+

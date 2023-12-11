@@ -8,6 +8,7 @@
     <title>Film Finder</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="Find a movie to watch!" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
@@ -20,17 +21,17 @@
   <body>
     <!-- YOUR HTML GOES HERE -->
     <nav class="navbar">
-        <!-- title -->
+
+      <div class="logo">
+        <img src="images/logo.png">
         <a href="index.html"><h1>Film Finder</h1></a>
+      </div>
     
-        <!-- NAVIGATION MENU -->
         <ul class="nav-links">
     
-          <!-- USING CHECKBOX HACK -->
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
     
-          <!-- NAVIGATION MENUS -->
           <nav class="menu">
     
             <li><a href="database.html">Database</a></li>
@@ -44,26 +45,34 @@
       <h2>You got...</h2>
       <h1>Little Women</h1>
     
-    <div class="categories">
-      <span><strong>Year:</strong> 2019</span>
-      <span><strong>Runtime:</strong> 135 min</span>
-      <span><strong>Rating:</strong> PG</span>
-      <span><strong>Directed by:</strong> Greta Gerwig</span>
-      <span><strong>Rotten Tomatoes Score:</strong> 95%</span>
-    </div>
+    <ul class="categories">
+      <li><strong>Year:</strong> 2019</li>
+      <li><strong>Runtime:</strong> 135 min</li>
+      <li><strong>Rating:</strong> PG</li>
+      <li><strong>Directed by:</strong> Greta Gerwig</li>
+      <li><strong>Rotten Tomatoes Score:</strong> 95%</li>
+    </ul>
 
     <p>
         In the years after the Civil War, Jo March lives in New York and makes her living as a writer, while her sister Amy studies painting in Paris. Amy has a chance encounter with Theodore, a childhood crush who proposed to Jo but was ultimately rejected. 
         Their oldest sibling, Meg, is married to a schoolteacher, while shy sister Beth develops a devastating illness that brings the family back together.
     </p>
     
-    <p><strong>You may also like:</strong> Emma, 12 Years a Slave</p>
+    <p class="more"><strong>You may also like:</strong> Emma, 12 Years a Slave</p>
     
-    <a href="index.html"><button>Play Again</button></a>
-    <a href="database.html"><button>All Movies</button></a>
+    <a href="index.html">Play Again</a>
+    <a href="database.html">All Movies</a>
 
 
     </div>
+
+    <footer>
+      <a href="https://docs.google.com/document/d/1VXZBMkR57Ta4YS_jQCol-NFhYwIlyS2sqUe4vt7qG2c/edit?usp=sharing" target="_blank">Project Proposal</a> | 
+      <a href="https://docs.google.com/presentation/d/1gX88mMZCCXQPfuAnMLF6oYoPTaVGo88IghFGqd07yIE/edit?usp=sharing" target="_blank">Wireframes</a> | 
+      <a href="https://docs.google.com/document/d/1PgZn4g9oC_h2kGBuilSjCS1Uxpe9EvWp3SJjitfgxmA/edit?usp=sharing" target="_blank">Design Documentation</a> | 
+      <a href="https://docs.google.com/document/d/1YKPKw5KK2AlRlsFsd39fYi4_PvVKT5tXG188dJDQPpk/edit?usp=sharing" target="_blank">UX/UI Report</a>
+    </footer>
+
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>
 </html>

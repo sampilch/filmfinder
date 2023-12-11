@@ -1,0 +1,15 @@
+.slick-carousel h1 {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .slidecontent a {
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+  }
+  
+  .slidecontent {
+    background-color: red;
+    padding: 70px 0;
+  }
