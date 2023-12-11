@@ -52,6 +52,10 @@ h2 {
   margin-bottom: -20px;
 }
 
+h3 {
+  margin-top: 15px;
+}
+
 /* nav bar */
 .navbar {
   display: flex;
@@ -407,7 +411,7 @@ footer a {
 
     .slick-carousel {
       width: 85%;
-      height: 22em;
+      height: 24em;
     }
 
     .slide {
@@ -421,7 +425,6 @@ footer a {
 
     .slide h1 {
       font-size: 28px;
-      margin-bottom: -10px;
     }
 
     /* movie page */
@@ -463,6 +466,7 @@ footer a {
       margin-left: 1em;
       margin-right: 1em;
       margin-bottom: 3em;
+      height:800px;
     }
 
   }
