@@ -424,14 +424,14 @@ footer a {
       margin-top: 2em;
       margin-left: 1em;
       margin-right: 1em;
-      padding-bottom: 5em;
       height: 900px;
+      margin-bottom: 3em;
     }
 
     .poster {
       float: none;
-      margin-left: 2em;
-      margin-right: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
       align-items: center;
       justify-content: center;
 
@@ -458,7 +458,7 @@ footer a {
       margin-top: 2em;
       margin-left: 1em;
       margin-right: 1em;
-      padding-bottom: 4em;
+      margin-bottom: 3em;
     }
 
   }
