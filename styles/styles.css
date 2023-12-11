@@ -419,12 +419,16 @@ footer a {
       margin-bottom: 10px;
     }
 
+    .slide h1 {
+      font-size: 28px;
+    }
+
     /* movie page */
     .info {
       margin-top: 2em;
       margin-left: 1em;
       margin-right: 1em;
-      height: 900px;
+      height: 1000px;
       margin-bottom: 3em;
       padding-bottom: 5em;
     }
